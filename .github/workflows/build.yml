@@ -40,15 +40,3 @@ jobs:
         with:
           name: "jre${{ matrix.version }}-ios-aarch64"
           path: jre${{ matrix.version }}*.tar.xz
-
-      - name: Upload JRE debuginfo build output
-        uses: actions/upload-artifact@v4
-        with:
-          name: "jre${{ matrix.version }}-ios-debuginfo-aarch64"
-          path: dizout
-
-  
-        uses: actions/upload-artifact@v4
-        with:
-          name: jre${{ matrix.version }}-pojav
-          path: pojav/jre${{ matrix.version }}-pojav/*
